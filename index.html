@@ -1,0 +1,59 @@
+<html>
+    <head>
+      <title>интукод</title>
+    </head>
+    <body>
+      <div id="main">
+          <ul id="list">
+              <li>html</li>
+              <li>css</li>
+          </ul>
+      </div>
+        <div id="copyright">(c) INTOCODE</div>
+
+    <script>
+        //1
+        const work = () => {
+          const title =  document.createElement('h1');
+          title.textContent = 'Работа с DOM';
+          document.body.prepend(title);
+        }
+        work();
+
+        //2
+        const learn = () => {
+            const main = document.querySelector('#main');
+            let a = document.createElement('a');
+            a.href= "https://learn.javascript.ru/dom-nodes";
+            a.textContent= 'ссылка на DOM';
+            main.append(a);
+        }
+        learn();
+
+        //3
+        const color = (name) => {
+            document.body.style.backgroundColor = name;
+        }
+        color('green')
+
+        //4
+        const text = (content) => {
+            const list = document.querySelector('#list');
+            const li = document.createElement('li');
+            li.textContent = `${content}`;
+            list.append(li);
+        }
+        text("hi");
+        
+        //5
+        const remove = () => {
+            const copyright = document.querySelector('#copyright');
+            copyright.remove();
+        }
+        remove();
+        //Функция которая удаляет блок с копирайтом (`#copyright`).
+
+
+    </script>
+    </body>
+    </html>
